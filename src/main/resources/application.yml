@@ -6,10 +6,10 @@ proxy.metadata-report.address: zookeeper://127.0.0.1:2181
 
 
 
-mapping:
-  services:
-   -
-    name: demoservice
-    interfaze: org.apache.dubbo.api.DemoService
-    group: test
-    version: 1.0.0
+#mapping:
+#  services:
+#   -
+#    name: edf-system-service
+#    interfaze: com.ttk.edf.system.itf.ISysRunningModeConfigService
+#    group:
+#    version:

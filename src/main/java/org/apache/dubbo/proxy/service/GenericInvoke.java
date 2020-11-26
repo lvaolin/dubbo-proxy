@@ -36,6 +36,16 @@ public class GenericInvoke {
     private static ConcurrentHashMap<String, ReferenceConfig<GenericService>> cachedConfig = new ConcurrentHashMap<>();
     private static Logger logger = LoggerFactory.getLogger(GenericInvoke.class);
 
+    /**
+     * 发起泛化调用
+     * @param interfaceName  接口名称
+     * @param group   分组
+     * @param version  版本
+     * @param methodName  方法名称
+     * @param paramTypes  参数类型
+     * @param paramObjs   参数值
+     * @return
+     */
     public static Object genericCall(String interfaceName, String group,
                                      String version, String methodName, String[] paramTypes,
                                      Object[] paramObjs) {

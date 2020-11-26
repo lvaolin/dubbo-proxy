@@ -61,6 +61,7 @@ public class RequestWorker implements Runnable {
         String interfaze = Tool.getInterface(serviceID);
         String group = Tool.getGroup(serviceID);
         String version = Tool.getVersion(serviceID);
+        //如果客户端传递了prameValues但没有传递paramTypes参数，则从元数据中心获取
         if (serviceDefinition.getParamTypes() == null && serviceDefinition.getParamValues() != null) {
             String[] types = getTypesFromMetadata(serviceDefinition.getApplication(), interfaze, group, version,
                     serviceDefinition.getMethodName(), serviceDefinition.getParamValues().length);
